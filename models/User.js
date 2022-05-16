@@ -8,7 +8,7 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
-} 
+}
  
 // define table columns and configuration 
 User.init( 
