@@ -1,9 +1,11 @@
-//this collects all of the API routes and package them for us to use
+const router = require('express').Router();
 
-const router = require('express').Router(); 
- 
-const userRoutes = require('./user-routes.js'); 
- 
-router.use('/users', userRoutes); 
- 
-module.exports = router; 
+const userRoutes = require('./user-routes');
+const postRoutes = require('./post-routes');
+const commentRoutes = require('./comment-routes');
+
+router.use('/users', userRoutes);
+router.use('/posts', postRoutes);
+router.use('/comments', commentRoutes);
+
+module.exports = router;
