@@ -73,6 +73,7 @@ router.post('/', (req, res) => {
       res.json(dbUserData);
     });
   })
+})
 
 router.post('/login', (req, res) => {
   // expects {email: 'lerantino@gmail.com', password: 'password1234'}
